@@ -37,9 +37,9 @@ const products: Product[] = [
 
 console.log("Products:", products); // Log the complete array of products
 console.log("First product:", products[0]); // Access the first item in the array
-console.log("First product title:", products[0].title); // Access a property of the first object
-console.log("Second product price:", products[1].price); // Access a property of the second object
-console.log("Third product available:", products[2].isAvailable); // Access a property of the third object
+console.log("First product title:", products[0]?.title); // Access a property of the first object (safe)
+console.log("Second product price:", products[1]?.price); // Access a property of the second object (safe)
+console.log("Third product available:", products[2]?.isAvailable); // Access a property of the third object (safe)
 
 // -----------------------------------------------------------------------------
 // CUSTOMER ARRAY
@@ -67,8 +67,8 @@ const customers: Customer[] = [
 ];
 
 console.log("Customers:", customers); // Log the full customer array
-console.log("First customer name:", customers[0].name); // Access the first customer's name
-console.log("Second customer premium:", customers[1].isPremium); // Access the second customer's premium status
+console.log("First customer name:", customers[0]?.name); // Access the first customer's name (safe)
+console.log("Second customer premium:", customers[1]?.isPremium); // Access the second customer's premium status (safe)
 
 // -----------------------------------------------------------------------------
 // ORDER ARRAY
@@ -93,6 +93,6 @@ const orders: Order[] = [
 ];
 
 console.log("Orders:", orders); // Log the complete order array
-console.log("First order total:", orders[0].total); // Access the total of the first order
-console.log("Second order paid:", orders[1].isPaid); // Access the payment status of the second order
+console.log("First order total:", orders[0]?.total); // Access the total of the first order (safe)
+console.log("Second order paid:", orders[1]?.isPaid); // Access the payment status of the second order (safe)
 
