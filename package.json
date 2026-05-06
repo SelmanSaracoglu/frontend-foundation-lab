@@ -12,6 +12,7 @@
     "dev:optional-properties": "tsx src/01-types/optional-properties.ts",
     "dev:function-typing": "tsx src/02-functions/function-typing.ts",
     "dev:array-methods": "tsx src/03-array-methods/array-methods.ts",
+    "dev:destructuring": "tsx src/04-modern-js/destructuring.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
