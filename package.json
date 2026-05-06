@@ -13,12 +13,13 @@
     "dev:function-typing": "tsx src/02-functions/function-typing.ts",
     "dev:array-methods": "tsx src/03-array-methods/array-methods.ts",
     "dev:destructuring": "tsx src/04-modern-js/destructuring.ts",
+    "dev:modules": "tsx src/05-modules/main.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "tsx": "^4.21.0",
     "typescript": "^6.0.3"
