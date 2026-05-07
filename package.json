@@ -4,17 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:primitive-types": "tsx src/01-types/primitive-types.ts",
-    "dev:array-types": "tsx src/01-types/array-types.ts",
-    "dev:object-types": "tsx src/01-types/object-types.ts",
-    "dev:object-arrays": "tsx src/01-types/object-arrays.ts",
-    "dev:union-types": "tsx src/01-types/union-types.ts",
-    "dev:optional-properties": "tsx src/01-types/optional-properties.ts",
-    "dev:function-typing": "tsx src/02-functions/function-typing.ts",
-    "dev:callbacks": "tsx src/02-functions/callback-functions.ts",
-    "dev:array-methods": "tsx src/03-array-methods/array-methods.ts",
-    "dev:destructuring": "tsx src/04-modern-js/destructuring.ts",
-    "dev:modules": "tsx src/05-modules/main.ts",
+    "dev:examples": "tsx typescript-learning/03-arrays/examples.ts",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
