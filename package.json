@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev:examples": "tsx typescript-learning/04-objects/examples.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "typecheck:react-foundation": "tsc --noEmit -p tsconfig.react-foundation.json"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "React-Foundation/**/examples.tsx",
+    "React-Foundation/**/solutions.tsx",
+    "React-Foundation/projects/**/solution.tsx"
+  ]
+}
