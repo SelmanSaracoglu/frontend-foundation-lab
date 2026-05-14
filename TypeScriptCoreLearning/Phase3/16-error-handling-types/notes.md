@@ -1,4 +1,4 @@
-# 14 - Error Handling Types
+# 16 - Error Handling Types
 Bu milestone’da hata durumlarını TypeScript ile daha güvenli modellemeyi öğreneceğiz.
 
 Gerçek projelerde her işlem başarılı olmaz:

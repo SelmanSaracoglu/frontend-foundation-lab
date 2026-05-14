@@ -1,4 +1,4 @@
-# 15 - Async TypeScript & Promises
+# 17 - Async TypeScript & Promises
 
 Bu milestone’da TypeScript ile async işlemleri güvenli modellemeyi öğreneceğiz.
 

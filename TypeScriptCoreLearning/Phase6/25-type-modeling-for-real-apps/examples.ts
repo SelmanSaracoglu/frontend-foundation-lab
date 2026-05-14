@@ -58,11 +58,11 @@ const permissionConfig = {
   },
 } satisfies Record<Permission, PermissionConfig>;
 
-const rolePermissions = {
+const rolePermissions: Record<Role, readonly Permission[]> = {
   admin: ["users:read", "users:create", "users:update", "users:delete"],
   support: ["users:read", "users:update"],
   user: ["users:read"],
-} as const satisfies Record<Role, readonly Permission[]>;
+};
 
 // --------------------------------------------------
 // Domain models

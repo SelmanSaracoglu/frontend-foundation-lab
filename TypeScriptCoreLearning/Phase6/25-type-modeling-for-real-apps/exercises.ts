@@ -103,11 +103,11 @@ console.log(permissionConfig["users:delete"].risk);
 // user sadece read permission'ına sahip olsun.
 // --------------------------------------------------
 
-const rolePermissions = {
+const rolePermissions: Record<Role, readonly Permission[]> = {
   admin: ["users:read", "users:create", "users:update", "users:delete"],
   support: ["users:read", "users:update"],
   user: ["users:read"],
-} as const satisfies Record<Role, readonly Permission[]>;
+};
 
 console.log(rolePermissions.support);
 // Expected output:

@@ -1,4 +1,4 @@
-# 05 - Array Methods
+# 06 - Array Methods
 
 ## forEach
 

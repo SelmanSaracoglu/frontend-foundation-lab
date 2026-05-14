@@ -56,7 +56,7 @@
 // Exercise 5
 // Read this function and fix the type annotations if needed.
 
-function canAccessDashboard(isActive, role) {
+function canAccessDashboard(isActive: boolean, role: string): boolean {
   return isActive && role === "admin";
 }
 

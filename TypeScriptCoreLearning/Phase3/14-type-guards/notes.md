@@ -1,4 +1,4 @@
-# 13 - Type Guards
+# 14 - Type Guards
 Type guard, TypeScript’e şunu söylemenin güvenli yoludur:
 >>> “Bu değeri runtime’da kontrol ettim. Artık bu tipe güvenebilirsin.”
 

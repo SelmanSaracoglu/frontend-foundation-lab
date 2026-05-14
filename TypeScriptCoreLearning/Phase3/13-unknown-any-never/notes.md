@@ -1,4 +1,4 @@
-# 12 - unknown, any, never
+# 13 - unknown, any, never
 Bu milestone’da TypeScript’te üç özel tipi öğreneceğiz:
 - `any`
 - `unknown`

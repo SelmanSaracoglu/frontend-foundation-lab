@@ -1,4 +1,4 @@
-# 02 - Primitive Types
+# 03 - Primitive Types
 Primitive type, JavaScript ve TypeScript'teki en temel değer tipleridir.
 
 ## string: 

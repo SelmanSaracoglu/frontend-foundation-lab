@@ -125,7 +125,13 @@
 // Exercise 9
 // Fix this function by adding proper parameter and return types.
 
-function countFailedLogs(logs) {
+function countFailedLogs(
+  logs: {
+    action: string;
+    actorEmail: string;
+    success: boolean;
+  }[],
+): number {
   let count = 0;
 
   for (const log of logs) {

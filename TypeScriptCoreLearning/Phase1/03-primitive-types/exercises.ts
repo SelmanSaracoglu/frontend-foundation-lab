@@ -66,7 +66,11 @@
 // Exercise 6
 // Fix this function by adding correct type annotations.
 
-function createAuditMessage(action, actorEmail, success) {
+function createAuditMessage(
+  action: string,
+  actorEmail: string,
+  success: boolean,
+): string {
   if (success) {
     return `${actorEmail} successfully performed ${action}`;
   }
@@ -87,7 +91,7 @@ function createAuditMessage(action, actorEmail, success) {
 // Exercise 7
 // Read this code and improve the type annotation.
 
-let authToken = null;
+let authToken: string | null = null;
 
 // Later in the application:
 authToken = "token-abc-123";

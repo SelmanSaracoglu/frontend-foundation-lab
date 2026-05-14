@@ -187,7 +187,7 @@ const permissionMetadata: Record<
   },
 };
 
-console.log(permissionMetadata["delete:user"].isSensitive);
+console.log(permissionMetadata["delete:user"]?.isSensitive);
 
 // Expected output:
 // true

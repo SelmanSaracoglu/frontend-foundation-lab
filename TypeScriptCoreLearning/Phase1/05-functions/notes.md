@@ -1,4 +1,4 @@
-# 04 - Functions
+# 05 - Functions
 
 ## Parameter types: Fonksiyon parametrelerine type yazabiliriz.
 

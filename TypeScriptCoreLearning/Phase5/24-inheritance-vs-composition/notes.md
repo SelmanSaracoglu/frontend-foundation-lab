@@ -1,4 +1,4 @@
-# 22-inheritance-vs-composition
+# 24 - Inheritance vs Composition
 
 ## Amaç
 

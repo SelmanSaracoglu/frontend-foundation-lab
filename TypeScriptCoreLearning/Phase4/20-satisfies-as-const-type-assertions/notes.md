@@ -1,4 +1,4 @@
-# 23-satisfies-as-const-type-assertions
+# 20 - satisfies, as const, and Type Assertions
 
 ## Amaç
 

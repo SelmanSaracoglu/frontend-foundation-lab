@@ -1,4 +1,4 @@
-# 03 - Arrays and Objects
+# 04 - Arrays and Objects
 
 ## Array type yazımı
 

@@ -1,4 +1,4 @@
-# 07 - Type Aliases
+# 08 - Type Aliases
 
 Gerçek uygulamalarda aynı veri yapıları tekrar tekrar kullanılır.
 Örneğin bir kullanıcı modeli:

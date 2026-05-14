@@ -1,4 +1,4 @@
-# 09 - Unions and Narrowing
+# 10 - Unions and Narrowing
 JavaScript'te bir değer farklı şekillerde gelebilir. Örneğin bir search input'tan gelen değer:
 ```ts
 const value = "keyboard";

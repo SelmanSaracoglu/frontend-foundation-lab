@@ -1,4 +1,4 @@
-# 06 - Collections: Map, Set, Record
+# 07 - Collections: Map, Set, Record
 
 ## Bu konu neden önemli?
 

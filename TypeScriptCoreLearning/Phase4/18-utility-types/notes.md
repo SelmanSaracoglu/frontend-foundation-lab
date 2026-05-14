@@ -1,4 +1,4 @@
-# 17-utility-types
+# 18 - Utility Types
 
 Bu milestone’da TypeScript’in hazır utility type’larını öğreneceğiz.
 

@@ -68,7 +68,7 @@ const users: {
 ];
 
 console.log(users.length);
-console.log(users[0].email);
+console.log(users[0]?.email);
 
 // Expected output:
 // 2
@@ -205,8 +205,8 @@ const permissions: {
   },
 ];
 
-console.log(permissions[1].key);
-console.log(permissions[1].isSensitive);
+console.log(permissions[1]?.key);
+console.log(permissions[1]?.isSensitive);
 
 // Expected output:
 // delete:user

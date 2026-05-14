@@ -1,4 +1,4 @@
-# 08 - Interfaces: Gerçek projelerde birçok veri object olarak modellenir:
+# 09 - Interfaces
 
 {
 id: "user-1",

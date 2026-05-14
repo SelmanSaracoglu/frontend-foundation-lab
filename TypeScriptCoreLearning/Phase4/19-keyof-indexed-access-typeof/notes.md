@@ -1,4 +1,4 @@
-# 18-keyof-indexed-access-typeof
+# 19 - keyof, Indexed Access, and typeof
 
 ## Amaç
 

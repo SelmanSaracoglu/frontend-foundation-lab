@@ -1,4 +1,4 @@
-# 10 - Discriminated Unions
+# 12 - Discriminated Unions
 Gerçek uygulamalarda bazı değerler birden fazla farklı state'ten biri olabilir.
 
 Örneğin bir API sonucu:

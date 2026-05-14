@@ -1,4 +1,4 @@
-# 24-tsconfig-and-strictness-basics
+# 02 - TSConfig and Strictness Basics
 
 ## Amaç
 

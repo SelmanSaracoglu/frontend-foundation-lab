@@ -167,17 +167,23 @@ function createTask(request: CreateTaskRequest): ApiResult<Task> {
     };
   }
 
+  const createdTask: Task = {
+    id: "task-2",
+    title: request.title,
+    status: "todo",
+    createdAt: "2026-01-01T11:00:00Z",
+    updatedAt: "2026-01-01T11:00:00Z",
+    ...(request.description !== undefined
+      ? { description: request.description }
+      : {}),
+    ...(request.assigneeId !== undefined
+      ? { assigneeId: request.assigneeId }
+      : {}),
+  };
+
   return {
     status: "success",
-    data: {
-      id: "task-2",
-      title: request.title,
-      description: request.description,
-      status: "todo",
-      assigneeId: request.assigneeId,
-      createdAt: "2026-01-01T11:00:00Z",
-      updatedAt: "2026-01-01T11:00:00Z",
-    },
+    data: createdTask,
   };
 }
 
@@ -321,7 +327,9 @@ function createSecurityLog(
     actorUserId,
     action,
     createdAt: "2026-01-01T12:00:00Z",
-    metadata,
+    ...(metadata !== undefined
+      ? { metadata }
+      : {}),
   };
 }
 

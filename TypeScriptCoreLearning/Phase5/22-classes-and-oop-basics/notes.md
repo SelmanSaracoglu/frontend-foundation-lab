@@ -1,4 +1,4 @@
-# 20-classes-and-oop-basics
+# 22 - Classes and OOP Basics
 
 ## Amaç
 

@@ -1,4 +1,4 @@
-# 25-type-modeling-for-real-apps
+# 25 - Type Modeling for Real Apps
 
 ## Amaç
 

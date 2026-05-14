@@ -153,13 +153,23 @@ const loginResult: ApiResult<
     email: string;
   },
   AuthError
-> = {
-  success: false,
-  error: {
-    code: "INVALID_CREDENTIALS",
-    message: "Email or password is incorrect",
-  },
-};
+> =
+  Math.random() > 0.5
+    ? {
+        success: true,
+        data: {
+          userId: "u1",
+          email: "admin@example.com",
+        },
+      }
+    : {
+        success: false,
+        error: {
+          code: "INVALID_CREDENTIALS",
+          message:
+            "Email or password is incorrect",
+        },
+      };
 
 if (loginResult.success) {
   console.log(loginResult.data.email);
