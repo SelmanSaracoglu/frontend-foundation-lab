@@ -1,70 +1,87 @@
+type Role =
+  | "admin"
+  | "support"
+  | "viewer";
+
+type Permission =
+  | "ticket:read"
+  | "ticket:close"
+  | "audit:read";
+
+type User = {
+  id: number;
+  name: string;
+  role: Role;
+};
+
 //
 // EXERCISE 1
 //
-// Button component'i oluştur.
+// rolePermissions oluştur.
 //
-// Props:
-// - label: string
-// - variant: "primary" | "danger"
+// admin:
+// - ticket:read
+// - ticket:close
+// - audit:read
 //
-// Render:
-// button içinde label göster.
+// support:
+// - ticket:read
+// - ticket:close
+//
+// viewer:
+// - ticket:read
 //
 
-type ButtonProps = {
+const rolePermissions = {
   // burayı doldur
 };
-
-function Button(props: ButtonProps) {
-  return (
-    <button>
-      {/* burayı doldur */}
-    </button>
-  );
-}
 
 //
 // EXERCISE 2
 //
-// EmptyState component'i oluştur.
+// hasPermission function'ı oluştur.
 //
-// Props:
-// - title: string
-// - message?: string
+// Parametreler:
+// - role
+// - permission
 //
-// Eğer message varsa göster.
+// rolePermissions içinden kontrol et.
 //
-
-type EmptyStateProps = {
-  // burayı doldur
-};
-
-function EmptyState(
-  props: EmptyStateProps
-) {
-  return (
-    <section>
-      {/* burayı doldur */}
-    </section>
-  );
-}
 
 //
 // EXERCISE 3
 //
-// Panel component'i oluştur.
+// SupportPanel component'i oluştur.
 //
 // Props:
-// - children: React.ReactNode
+// - user
 //
-// section içinde children render et.
+// Her kullanıcı için:
+//
+// View Tickets button
+//
+// göster.
+//
+// Eğer ticket:close permission varsa:
+//
+// Close Ticket button
+//
+// göster.
+//
+// Eğer audit:read permission varsa:
+//
+// View Audit Logs button
+//
+// göster.
 //
 
-type PanelProps = {
+type SupportPanelProps = {
   // burayı doldur
 };
 
-function Panel(props: PanelProps) {
+function SupportPanel(
+  props: SupportPanelProps
+) {
   return (
     <section>
       {/* burayı doldur */}
@@ -75,13 +92,9 @@ function Panel(props: PanelProps) {
 //
 // EXERCISE 4
 //
-// App içinde:
+// App içinde currentUser oluştur.
 //
-// - Panel içinde EmptyState
-// - primary Button
-// - danger Button
-//
-// render et.
+// role değerini değiştirerek UI farkını gözlemle.
 //
 
 function App() {

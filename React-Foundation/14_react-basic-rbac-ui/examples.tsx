@@ -1,85 +1,96 @@
-type BadgeVariant =
-  | "success"
-  | "warning"
-  | "danger";
+type Role =
+  | "admin"
+  | "editor"
+  | "viewer";
 
-type BadgeProps = {
-  label: string;
-  variant: BadgeVariant;
+type Permission =
+  | "user:read"
+  | "user:delete"
+  | "course:edit"
+  | "audit:read";
+
+type User = {
+  id: number;
+  name: string;
+  role: Role;
 };
 
-function Badge({ label, variant }: BadgeProps) {
-  return (
-    <span className={`badge badge-${variant}`}>
-      {label}
-    </span>
-  );
+const rolePermissions: Record<Role, Permission[]> = {
+  admin: [
+    "user:read",
+    "user:delete",
+    "course:edit",
+    "audit:read",
+  ],
+  editor: [
+    "user:read",
+    "course:edit",
+  ],
+  viewer: [
+    "user:read",
+  ],
+};
+
+function hasPermission(
+  role: Role,
+  permission: Permission
+) {
+  return rolePermissions[role].includes(permission);
 }
 
-type AlertProps = {
-  title: string;
-  message?: string;
-  variant: BadgeVariant;
+type ActionPanelProps = {
+  user: User;
 };
 
-function Alert({
-  title,
-  message,
-  variant,
-}: AlertProps) {
-  return (
-    <section className="alert">
-      <Badge
-        label={variant}
-        variant={variant}
-      />
-
-      <h2>{title}</h2>
-
-      {message && <p>{message}</p>}
-    </section>
+function ActionPanel({ user }: ActionPanelProps) {
+  const canDeleteUser = hasPermission(
+    user.role,
+    "user:delete"
   );
-}
 
-type CardProps = {
-  children: React.ReactNode;
-};
+  const canEditCourse = hasPermission(
+    user.role,
+    "course:edit"
+  );
 
-function Card({ children }: CardProps) {
+  const canReadAuditLogs = hasPermission(
+    user.role,
+    "audit:read"
+  );
+
   return (
-    <section className="card">
-      {children}
+    <section>
+      <h2>Actions for {user.name}</h2>
+
+      <button>View Users</button>
+
+      {canDeleteUser && (
+        <button>Delete User</button>
+      )}
+
+      {canEditCourse && (
+        <button>Edit Course</button>
+      )}
+
+      {canReadAuditLogs && (
+        <button>View Audit Logs</button>
+      )}
     </section>
   );
 }
 
 function App() {
+  const currentUser: User = {
+    id: 1,
+    name: "Ayşe",
+    role: "admin",
+  };
+
   return (
     <main>
-      <h1>Reusable Components</h1>
+      <h1>RBAC UI Example</h1>
 
-      <Card>
-        <Alert
-          title="Login successful"
-          message="Welcome back."
-          variant="success"
-        />
-      </Card>
-
-      <Card>
-        <Alert
-          title="Suspicious login detected"
-          message="Review recent account activity."
-          variant="warning"
-        />
-      </Card>
-
-      <Card>
-        <Alert
-          title="Account blocked"
-          variant="danger"
-        />
-      </Card>
+      <ActionPanel user={currentUser} />
     </main>
   );
 }
